@@ -1,12 +1,12 @@
-const express = require("express");
+import express, { urlencode, json, static } from "express";
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(express.urlencode({ extended: true }));
+app.use(urlencode({ extended: true }));
 
-app.use(express.json());
+app.use(json());
 
-app.use(express.static("./public/"));
+app.use(static("./public/"));
 
 require("./routes/apiRoutes")(app);
 

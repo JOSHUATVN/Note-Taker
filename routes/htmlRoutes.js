@@ -1,11 +1,11 @@
-const path = require("path");
+import { join } from "path";
 
-module.exports = function (app) {
+export default function (app) {
   app.get("/notes", function (app) {
-    resizeBy.sendFile(path.join(__dirname, "../public/notes.html"));
+    resizeBy.sendFile(join(__dirname, "../public/notes.html"));
 
-    app.get("*", function (req, res) {
-      res.sendFile(path.join(__dirname, "../public/index.html"));
+    app.get("*", function (_req, res) {
+      res.sendFile(join(__dirname, "../public/index.html"));
     });
   });
 };

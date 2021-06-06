@@ -1,15 +1,15 @@
-const noteData = require("../Develop/db/db.json");
+import noteData, { push, length } from "../Develop/db/db.json";
 
-module.exports = function(app) {
-    app.get("/api/notes/", function(req, res) {
+export default function(app) {
+    app.get("/api/notes/", function(_req, res) {
         res.json(noteData);
     });
     app.post("/api/notes/", function (req, res) {
-        noteData.push(req, body);
+        push(req, body);
         res.json(true);
     })
-        app.delete("/api/notes/", function (req, res) {
-        noteData.length = 0;
+        app.delete("/api/notes/", function (_req, res) {
+        length = 0;
         res.json({ok: true});
     });
 };
