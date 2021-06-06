@@ -1,17 +1,14 @@
-import express, { urlencode, json, static } from "express";
+const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(urlencode({ extended: true }));
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+app.use(express.static('public'));
 
-app.use(json());
+require('./routes/apiRoutes')(app);
+require('./routes/htmlRoutes')(app);
 
-app.use(static("./public/"));
-
-require("./routes/apiRoutes")(app);
-
-require("./routes/htmlRoutes")(app);
-
-app.listen(PORT, function () {
-  console.log("App is listening on PORT:", + PORT);
+app.listen(PORT, function() {
+    console.log(`Server is listening on PORT: ${PORT}`);
 });
