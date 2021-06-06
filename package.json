@@ -1,23 +1,14 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "Create an application called Note taker that is used to write and save notes.",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JOSHUATVN/Note-Taker.git"
-  },
-  "author": "Joshua Nguyen",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JOSHUATVN/Note-Taker/issues"
-  },
-  "homepage": "https://github.com/JOSHUATVN/Note-Taker#readme",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.16.4"
   }
 }
