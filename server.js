@@ -1,4 +1,4 @@
-const exoress = require("express");
+const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -13,5 +13,5 @@ require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 app.listen(PORT, function () {
-  console.log("App is listening on PORT:", +PORT);
+  console.log("App is listening on PORT:", + PORT);
 });
